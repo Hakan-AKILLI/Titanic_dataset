@@ -69,3 +69,16 @@ GROUP BY
     Age
 ORDER BY
     Age;
+
+--Yeni yolcu ekleyen sorgu
+INSERT INTO passengers (passengerid, survived, pclass, name, sex, age, sibsp, parch, ticket, fare, cabin, embarked)
+VALUES (112233, 1, 1, 'Hakan Akıllı', 'male', 29, 0, 0, '24160', 211.3375, 'B5', 'S');
+
+--ID numarasına göre yolcuların bilgilerini gösteren kod
+SELECT *
+FROM passengers
+WHERE PassengerId = 112233;
+
+--yolcu bilgilerini silen sorgu
+DELETE FROM passengers
+WHERE PassengerId = 112233;
